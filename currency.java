@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
-
 class currConv
 {   private float[][] convData = new float[6][6];
     
@@ -235,15 +234,15 @@ class CurrConvTest
         float currency;
         Scanner input = new Scanner(System.in);
         
-        System.out.print("Amount: ");
+        System.out.print("\nAmount: ");
         currency = input.nextFloat();
 
-        System.out.print("[1]Indian Ruppee \t [2]US Dollar \t [3]European Euro \n [4]Japanese Yen \t [5]Great Britain Pound \t [6]Australian Dollar");
+        System.out.print("\n[1]Indian Ruppee \t [2]US Dollar \t [3]European Euro \n [4]Japanese Yen \t [5]Great Britain Pound \t [6]Australian Dollar");
         
-        System.out.print("Input Currency: ");
+        System.out.print("\nInput Currency: ");
         ch1 = input.nextLine();
 
-        System.out.print("Output Currency: ");
+        System.out.print("\nOutput Currency: ");
         ch2 = input.nextLine();
         input.close();
 
