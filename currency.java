@@ -8,7 +8,7 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 
 class currConv
-{   private float[][] convData;
+{   private float[][] convData = new float[6][6];
     
     public File currData = new File("currData.txt");
     
@@ -30,8 +30,8 @@ class currConv
     {   Scanner writer = new Scanner(System.in);
 
         for (int i = 0; i < 6; i++)
-         {    for(int j = 0; i < 6; j++)
-              {   System.out.print("("+i+","+j+")");
+         {    for(int j = 0; i <= 5; j++)
+              {   System.out.print(" \n("+(i)+","+(j)+"): ");
                   convData[i][j] = writer.nextFloat();
               }
          }
@@ -207,25 +207,25 @@ class CurrConvTest
        
         //Intializing
        if(conversion.currData.exists())
-        {  System.out.print("file found....");
+        {  System.out.print("\nfile found....");
           
             if(conversion.FileEmpty());
-            {System.out.print("file is empty!");
-             System.out.print("Enter the data into the file:");
+            {System.out.print("\nfile is empty!");
+             System.out.print("\nEnter the data into the file:");
              conversion.currWrite();
-             System.out.print("Saving Data....");             
+             System.out.print("\nSaving Data....");             
             }
         }
         else if (conversion.FileEmpty() == false)
         {    System.out.print("data found....");
-             System.out.print("reading data....");
+             System.out.print("\nreading data....");
              conversion.currReadFile();            
         }
         else if (conversion.currData.exists() == false)
-        {   System.out.print("file not found....");
-            System.out.print("creating file.....");
+        {   System.out.print("\nfile not found....");
+            System.out.print("\ncreating file.....");
             conversion.currFile();
-            System.out.print("Enter the data into the file:");
+            System.out.print("\nEnter the data into the file:");
             conversion.currWrite();
         }
         
@@ -274,7 +274,141 @@ class CurrConvTest
               conversion.INRtoAUD(currency);
               break;
             }
+
+            case ("2"):
+            switch (ch2)
+            { case ("1"):
+              conversion.USDtoINR(currency);
+              break;
+
+              case ("2"):
+              conversion.USDtoUSD(currency);
+              break;
+
+              case ("3"):
+              conversion.USDtoEUR(currency);
+              break;
+
+              case ("4"):
+              conversion.USDtoYEN(currency);
+              break;
+              
+              case ("5"):
+              conversion.USDtoGBP(currency);
+              break;
+
+              case ("6"):
+              conversion.USDtoAUD(currency);
+              break;
+            }
+
+            case ("3"):
+            switch (ch2)
+            { case ("1"):
+              conversion.EURtoINR(currency);
+              break;
+
+              case ("2"):
+              conversion.EURtoUSD(currency);
+              break;
+
+              case ("3"):
+              conversion.EURtoEUR(currency);
+              break;
+
+              case ("4"):
+              conversion.EURtoYEN(currency);
+              break;
+              
+              case ("5"):
+              conversion.EURtoGBP(currency);
+              break;
+
+              case ("6"):
+              conversion.EURtoAUD(currency);
+              break;
+            }
             
+            case ("4"):
+            switch (ch2)
+            { case ("1"):
+              conversion.YENtoINR(currency);
+              break;
+
+              case ("2"):
+              conversion.YENtoUSD(currency);
+              break;
+
+              case ("3"):
+              conversion.YENtoEUR(currency);
+              break;
+
+              case ("4"):
+              conversion.YENtoYEN(currency);
+              break;
+              
+              case ("5"):
+              conversion.YENtoGBP(currency);
+              break;
+
+              case ("6"):
+              conversion.YENtoAUD(currency);
+              break;
+            }
+
+            case ("5"):
+            switch (ch2)
+            { case ("1"):
+              conversion.GBPtoINR(currency);
+              break;
+
+              case ("2"):
+              conversion.GBPtoUSD(currency);
+              break;
+
+              case ("3"):
+              conversion.GBPtoEUR(currency);
+              break;
+
+              case ("4"):
+              conversion.GBPtoYEN(currency);
+              break;
+              
+              case ("5"):
+              conversion.GBPtoGBP(currency);
+              break;
+
+              case ("6"):
+              conversion.GBPtoAUD(currency);
+              break;
+            }
+
+            case ("6"):
+            switch (ch2)
+            { case ("1"):
+              conversion.AUDtoINR(currency);
+              break;
+
+              case ("2"):
+              conversion.AUDtoUSD(currency);
+              break;
+
+              case ("3"):
+              conversion.AUDtoEUR(currency);
+              break;
+
+              case ("4"):
+              conversion.AUDtoYEN(currency);
+              break;
+              
+              case ("5"):
+              conversion.AUDtoGBP(currency);
+              break;
+
+              case ("6"):
+              conversion.AUDtoAUD(currency);
+              break;
+            }
         }
     }
 }
