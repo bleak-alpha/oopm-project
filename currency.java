@@ -30,7 +30,7 @@ class currConv
     {   Scanner writer = new Scanner(System.in);
 
         for (int i = 0; i < 6; i++)
-         {    for(int j = 0; i <= 5; j++)
+         {    for(int j = 0; i < 6; j++)
               {   System.out.print(" \n("+(i)+","+(j)+"): ");
                   convData[i][j] = writer.nextFloat();
               }
