@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
+
 class currConv
 {   private float[][] convData = new float[6][6];
     
@@ -45,7 +46,7 @@ class currConv
              
              for(int i=0; i<6; i++)
              {   for(int j=0; j<6; i++)
-                     dos.writeFloat(convData[i][j]);
+                    dos.writeFloat(convData[i][j]);
              }
              
              dos.close();
